@@ -1,0 +1,43 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Hello BookController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+{# <div class="container">
+        <div class="book">
+            
+            <h1>{{ book.title }}</h1>
+            <p>image</p>
+            <h3>Catégorie : {{ book.category.name }}</h3>
+            <p>Auteur : {{ book.author.name}}</p>
+            <p>Editeur : {{ book.publisher.name }}</p>
+            <p>Résumé : {{ book.description }}</p>
+            <p>ISBN : {{ book.codeIsbn }}</p> #}
+            
+            {# rating !! #}
+{# 
+            <b><p>Prix : {{ book.price }}€</p>
+            <p style="color: green">{{ book.statusBook }}</p></b>
+            <button type="button" class="btn btn-dark">Ajouter au panier</button>
+        </div>
+    </div> #}
+
+{% endblock %}
+
+
+
+    {# <div class="liens">
+        {% if book.writer %}
+            <h2 style="color: #09458f">Auteur : {{book.writer.name}}</h2>
+        {% endif %}
+        {% if book.genre %}
+            <h2 style="color: #5f287a">Genre : {{book.genre.name}}</h2>
+        {% endif %}
+    </div>
+    
+{% endblock %} #}

@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Conseils de lectures{% endblock %}
+
+{% block body %}
+    <main class="container mt-3 mb-3">
+        <section>
+            <div class="text-center">
+            <h1>Nos conseils de lectures</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda tempore dicta quasi, maiores tempora accusamus ipsa cupiditate adipisci maxime? Nostrum est vero molestiae qui. Saepe cumque aliquid maiores libero explicabo.</p>
+            </div>
+        </section>
+
+        <section class="row">
+            <div class="col-12">
+                {% for category in categories %}
+                    {# <h2>{{ category.name}}</h2> #}
+                {% endfor %} 
+            </div>
+        </section>
+
+        <div class="card">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h3 class="card-title">{{ category.name}}</h3>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Voir les livres</a>
+        </div>
+      </div>
+   
+
+    </main>
+
+{% endblock %}
+

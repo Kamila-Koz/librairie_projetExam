@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des livres{% endblock %}
+
+{% block body %}
+
+    {% for book in books %}
+        
+        {# {{ book.image }} #}
+
+        {# Route de redirection pour qu'au clic sur le titre on arrive sur la page de description du livre #}
+        <a href="{{ path('book_show', {'id' : book.id}) }}">
+			<h2>{{ book.title }}</h2>
+		</a>
+        <h3>Catégorie : {{ book.category.name }}</h3>
+        <p>Auteur : {{ book.author.name}}</p>
+        <p>Editeur : {{ book.publisher.name }}</p>
+        <p>Résumé : {{ book.description }}</p>
+
+        {# rating !! #}
+        
+        <p>Prix : {{ book.price }}€</p>
+        <p style="color: green">{{ book.statusBook }}</p></b>
+
+        <button type="button" class="btn btn-dark">Ajouter au panier</button>
+        <hr>
+        
+    {% endfor %}
+
+{% endblock %}

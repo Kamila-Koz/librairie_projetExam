@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Catégorie{% endblock %}
+
+{% block body %}
+    <main class="container">
+        <section class="row">
+            <div class="col-12">
+                <h1 class="text-center">Liste des livres de la catégorie {{ category.name }}</h1>
+            </div>
+            
+            {% for book in category.books %}
+                <div class="col-4 mt-4">   
+                    <article class="card h-100">
+                        <div class="card-body">
+                            <img src="..." class="card-img-top" alt="...">        
+                            <h2 class="card-title">{{ book.title }}</h2>
+                            <p>Auteur : {{ book.author.name}}</p>
+                            <p class="card-text">{{ book.description }}</p>
+                            <b><p>Prix : {{ book.price }}€</p></b>
+                            <a href="{{ path('admin_book_show', {'id' : book.id}) }}" class="btn btn-info">Voir le livre</a>
+                            <button type="button" class="btn btn-dark">Ajouter au panier</button>
+                        </div>
+                    </article>
+                </div>          
+            {% endfor %}
+        
+        </section>
+    </main>
+{% endblock %}

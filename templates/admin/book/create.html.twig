@@ -1,0 +1,23 @@
+
+
+{% extends "base.html.twig" %}
+
+{% block title %}Hello BookController!{% endblock %}
+
+{% block body %}
+
+<main class="container">
+        <section class="row">
+            <div class="col-12">
+                
+        <h1 class="text-center">Ajouter un livre</h1>
+                {{ form(bookForm) }}
+                {# {% include "book/_form.html.twig" %} #}
+
+            </div>
+        </section>
+    </main>
+
+{% endblock %}
+
+

@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #91d8e38f">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{{ path('home') }}">Alpha-Bêtise</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{ path('home') }}">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Conseils de lectures</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('categories_list') }}">Boutique</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">La librairie</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+                <input type="search" class="form-control form-control-dark" placeholder="Rechercher..." aria-label="Search">
+            </form>
+            
+            <div class="text-end">
+
+                {% if app.user %}
+                    <a href="#" class="btn btn-light me-2">Mon compte</a>
+                    <a href="{{ path('app_logout') }}" class="btn btn-warning">Déconnection</a>
+                
+                {% else %}
+ 
+                    <a href="{{ path('app_register') }}" class="btn btn-light">Inscription</a> 
+                    <a href="{{ path('app_login') }}" class="btn btn-info">Connexion</a>     
+                {% endif %}
+                
+            </div>
+        </div>
+    </div>
+</nav>
